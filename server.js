@@ -27,8 +27,8 @@ const doFetch = async (url) => {
 // App
 const app = express();
 app.get('/', async (req, res) => {
-  // res.send('Hello World '+ JSON.stringify( await doFetch(url)));
-  res.send(y_parabola(5));
+  res.send('Hello World '+ JSON.stringify( await doFetch(url)));
+  // res.send(y_parabola(5));
 });
  
 app.listen(3000, () => {
