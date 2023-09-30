@@ -10,9 +10,12 @@
 name: Publish Docker image
 
 on:
-  deployment_status:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual run'
+        required: true
+        default: 'Manual trigger'
 
 jobs:
   push_to_registry:
